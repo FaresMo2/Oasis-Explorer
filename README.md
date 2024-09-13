@@ -78,7 +78,8 @@ Explore the full functionality of the app, including:
 
 - All guest information is securely stored.
 - User authentication and authorization are handled using industry-standard practices.
-- 
+
+
 
 ## 💻 Installation & Setup
 
