@@ -78,6 +78,7 @@ Explore the full functionality of the app, including:
 
 - All guest information is securely stored.
 - User authentication and authorization are handled using industry-standard practices.
+- 
 
 ## 💻 Installation & Setup
 
@@ -87,9 +88,10 @@ Explore the full functionality of the app, including:
    git clone https://github.com/username/the-wild-oasis-website.git
 
 2. run the following command to install all necessary dependencies:
+   ```bash
+   npm install
 
-
-3.3.Run the development server:
+3. Run the development server:
    ```bash
    npm run server
 
