@@ -3,13 +3,9 @@ export const metadata = {
 };
 const Page = () => {
   return (
-    <div>
-      <h1>Your Account</h1>
-
-      <button active={true} className="input">
-        Fares Now
-      </button>
-    </div>
+    <h2 className="text-2xl font-semibold text-accent-400 mb-7">
+      Welcome, Fares Mohamed
+    </h2>
   );
 };
 

@@ -9,8 +9,6 @@ const Josefin = Josefin_Sans({
   display: "swap",
 });
 
-console.log(Josefin);
-
 /* note-fonts : Next.js automatically self-host google fonts
 so u dont have to download any google fonts */
 
@@ -31,8 +29,9 @@ const RootLayout = ({ children }) => {
         className={`${Josefin.className} min-h-screen bg-primary-950 text-primary-100 flex flex-col antialiased`}
       >
         <Header />
-        <div className="flex-1 px-8 py-12">
-          <main className="mx-auto max-w-7xl">{children}</main>
+
+        <div className="grid flex-1 px-8 py-12">
+          <main className="w-full mx-auto max-w-7xl">{children}</main>
         </div>
       </body>
     </html>
