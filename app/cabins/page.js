@@ -1,15 +1,22 @@
-import { Suspense } from "react";
 import CabinList from "@/app/_components/CabinList";
-import { getCabins } from "@/app/_lib/data-service";
-import Spinner from "@/app/_components/Spinner";
+import Loading from "@/app/cabins/loading";
+import { Suspense } from "react";
+import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
+import { GET } from "../api/cabins/[cabinId]/route";
 
 // @/app => Next.js Automatically Support import Aliases
+
+export const revalidate = 3600; // 1hour
+// export const revalidate = 15s;
 
 export const metadata = {
   title: "Cabins",
 };
 
-export default function Page() {
+export default function Page({ searchParams }) {
+  const filter = searchParams?.capacity ?? "all";
+
   return (
     <div>
       <h1 className="mb-5 text-4xl font-medium text-accent-400">
@@ -24,8 +31,13 @@ export default function Page() {
         Welcome to paradise.
       </p>
 
-      <Suspense fallback={<Spinner />}>
-        <CabinList />
+      <div className="flex justify-end mb-8">
+        <Filter />
+      </div>
+
+      <Suspense fallback={<Loading />} key={filter}>
+        <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );
