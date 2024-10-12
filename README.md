@@ -31,7 +31,7 @@ This application serves the guests of The Wild Oasis Hotel, providing them with 
 
 You can check out the live version of the website here:
 
-👉 [Live Demo - The Wild Oasis user-facing](https://the-wild-oasis-website-chi-puce.vercel.app/)
+👉 [Live Demo - The Wild Oasis user-facing](https://the-wild-oasis-website-flame-ten.vercel.app/)
 
 Explore the full functionality of the app, including:
 - Cabin availability and details
