@@ -12,7 +12,6 @@ const initialState = {
 
 function ReservationProvider({ children }) {
   const [range, setRange] = useState(initialState);
-
   const resetRange = () => setRange(initialState);
 
   return (
